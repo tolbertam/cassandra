@@ -2616,7 +2616,7 @@ public class NodeProbe implements AutoCloseable
         autoRepairProxy.setPrimaryTokenRangeOnly(repairType, primaryTokenRangeOnly);
     }
 
-    public void setMVRepairEnabled(AutoRepairConfig.RepairType repairType, boolean enabled)
+    public void setMaterializedViewRepairEnabled(AutoRepairConfig.RepairType repairType, boolean enabled)
     {
         autoRepairProxy.setMVRepairEnabled(repairType, enabled);
     }
