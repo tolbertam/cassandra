@@ -2521,7 +2521,7 @@ public class NodeProbe implements AutoCloseable
 
     public String autoRepairConfiguration()
     {
-        return autoRepairProxy.autoRepairConfiguration();
+        return autoRepairProxy.getAutoRepairConfiguration();
     }
 
     public void setAutoRepairTokenRangeSplitterParameter(String repairType, String key, String value)
