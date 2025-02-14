@@ -64,6 +64,7 @@
     <property name="build.classes" value="${build.dir}/classes"/>
     <property name="build.classes.main" value="${build.classes}/main" />
     <property name="javadoc.dir" value="${build.dir}/javadoc"/>
+    <property name="sstableloader-javadoc.dir" value="${build.dir}/sstableloader-javadoc"/>
     <property name="interface.dir" value="${basedir}/interface"/>
     <property name="test.dir" value="${basedir}/test"/>
     <property name="test.resources" value="${test.dir}/resources"/>
@@ -392,6 +393,7 @@
         <mkdir dir="${test.classes}"/>
         <mkdir dir="${stress.test.classes}"/>
         <mkdir dir="${fqltool.test.classes}"/>
+        <mkdir dir="${sstableloader.test.classes}"/>
         <mkdir dir="${build.src.gen-java}"/>
         <mkdir dir="${build.dir.lib}"/>
         <mkdir dir="${jacoco.export.dir}"/>
@@ -655,6 +657,88 @@
     </target>
 
     <!--
+        sstableloader build file
+        -->
+    <property name="sstableloader.build.src" value="${basedir}/tools/sstableloader/src" />
+    <property name="sstableloader.test.src" value="${basedir}/tools/sstableloader/test/unit" />
+    <property name="sstableloader.build.classes" value="${build.classes}/sstableloader" />
+    <property name="sstableloader.test.classes" value="${build.dir}/test/sstableloader-classes" />
+    <property name="sstableloader.manifest" value="${sstableloader.build.classes}/MANIFEST.MF" />
+
+    <target name="sstableloader-build-test" depends="sstableloader-build" description="Compile sstableloader tests">
+        <javac debug="true" debuglevel="${debuglevel}" destdir="${sstableloader.test.classes}"
+               source="${ant.java.version}" target="${ant.java.version}"
+               includeantruntime="false" encoding="utf-8">
+            <classpath>
+                <path refid="cassandra.classpath.test"/>
+                <pathelement location="${sstableloader.build.classes}" />
+            </classpath>
+            <src path="${sstableloader.test.src}"/>
+        </javac>
+    </target>
+
+    <target name="sstableloader-build" depends="build" description="build sstableloader">
+        <antcall target="_sstableloader_build"/>
+    </target>
+
+    <target name="_sstableloader_build">
+        <mkdir dir="${sstableloader.build.classes}" />
+        <javac compiler="modern" debug="true" debuglevel="${debuglevel}"
+               source="${ant.java.version}" target="${ant.java.version}"
+               encoding="utf-8" destdir="${sstableloader.build.classes}" includeantruntime="true">
+            <src path="${sstableloader.build.src}" />
+            <classpath>
+                <path refid="cassandra.classpath" />
+            </classpath>
+        </javac>
+    </target>
+
+    <target name="sstableloader-test" depends="sstableloader-build-test, maybe-build-test" description="Runs sstableloader tests">
+        <testmacro inputdir="${sstableloader.test.src}"
+                       timeout="${test.timeout}">
+        </testmacro>
+    </target>
+
+    <target name="sstableloader-jar"
+            depends="sstableloader-build"
+            description="Assemble Cassandra sstableloader JAR files">
+
+        <!-- sstableloader jar -->
+        <manifest file="${sstableloader.manifest}">
+            <attribute name="Built-By" value="Apache Cassandra Project"/>
+            <attribute name="Main-Class" value="org.apache.cassandra.tools.BulkLoader"/>
+        </manifest>
+        <mkdir dir="${sstableloader.build.classes}/META-INF" />
+        <mkdir dir="${build.dir}/tools/lib/" />
+        <jar destfile="${build.dir}/tools/lib/sstableloader.jar" manifest="${sstableloader.manifest}">
+            <fileset dir="${sstableloader.build.classes}"/>
+        </jar>
+    </target>
+
+    <target name="sstableloader-javadoc" depends="build" description="Create javadoc" unless="no-javadoc">
+      <create-javadoc destdir="${sstableloader-javadoc.dir}">
+        <filesets>
+          <fileset dir="${sstableloader.build.src}" defaultexcludes="yes">
+            <include name="org/apache/**/*.java"/>
+          </fileset>
+        </filesets>
+      </create-javadoc>
+    </target>
+
+    <target name="sstableloader-javadoc-jar" depends="sstableloader-javadoc" unless="no-javadoc" description="Assemble sstableloader JavaDoc JAR file">
+      <jar jarfile="${build.dir}/${final.name}-sstableloader-javadoc.jar" basedir="${sstableloader-javadoc.dir}"/>
+      <delete quiet="true" dir="${sstableloader-javadoc.dir}"/>
+    </target>
+
+    <target name="sstableloader-sources-jar" depends="init" description="Assemble sstableloader Sources JAR file">
+      <jar jarfile="${build.dir}/${final.name}-sstableloader-sources.jar">
+        <fileset dir="${sstableloader.build.src}" defaultexcludes="yes">
+          <include name="org/apache/**/*.java"/>
+        </fileset>
+      </jar>
+    </target>
+
+    <!--
         simulator asm build file
         -->
     <property name="simulator-asm.build.src" value="${test.simulator-asm.src}" />
@@ -721,6 +805,9 @@
         </filterset>
 
         <copy file=".build/cassandra-deps-template.xml" tofile="${build.dir}/${final.name}.pom">
+            <filterset refid="pom-template"/>
+        </copy>
+        <copy file=".build/sstableloader-deps-template.xml" tofile="${build.dir}/${final.name}-sstableloader.pom">
             <filterset refid="pom-template"/>
         </copy>
         <copy file=".build/parent-pom-template.xml" tofile="${build.dir}/${final.name}-parent.pom">
@@ -826,7 +913,7 @@
     </target>
 
     <target name="jar"
-            depends="_main-jar,build-test,stress-jar,fqltool-jar,simulator-jars,write-poms"
+            depends="_main-jar,build-test,stress-jar,fqltool-jar,simulator-jars,sstableloader-jar,write-poms"
             description="Assemble Cassandra JAR files">
     </target>
 
@@ -910,7 +997,7 @@
     </target>
 
     <!-- creates release tarballs -->
-    <target name="artifacts" depends="_artifacts-init,check,gen-doc,sources-jar"
+    <target name="artifacts" depends="_artifacts-init,check,gen-doc,sources-jar,sstableloader-sources-jar"
             description="Create Cassandra tarball and maven artifacts">
       <tar compression="gzip" longfile="gnu"
         destfile="${build.dir}/${final.name}-bin.tar.gz">
@@ -1013,7 +1100,7 @@
     <antcall target="build-test" inheritRefs="true"/>
   </target>
 
-  <target name="build-test" depends="_main-jar,stress-build-test,fqltool-build,resolver-dist-lib,simulator-jars"
+  <target name="build-test" depends="_main-jar,stress-build-test,fqltool-build-test,sstableloader-build-test,resolver-dist-lib,simulator-jars"
           description="Compile test classes">
     <antcall target="_build-test"/>
     <antcall target="_check-test-names"/>
@@ -1032,6 +1119,7 @@
      <classpath>
         <path refid="cassandra.classpath.test"/>
         <pathelement location="${fqltool.build.classes}"/>
+        <pathelement location="${sstableloader.build.classes}"/>
      </classpath>
      <compilerarg value="-XDignore.symbol.file"/>
      <!-- needed to compile org.apache.cassandra.utils.memory.BufferPoolTest -->
@@ -1060,7 +1148,7 @@
     <macrodef name="check-test-names">
         <attribute name="annotationName"/>
         <attribute name="regex"/>
-        <attribute name="scanClassPath" default="${test.classes}:${fqltool.test.classes}:${stress.test.classes}"/>
+        <attribute name="scanClassPath" default="${test.classes}:${fqltool.test.classes}:${stress.test.classes}:${sstableloader.test.classes}"/>
         <attribute name="packageName" default="org.apache.cassandra"/>
         <attribute name="expand" default="true"/>
         <attribute name="normalize" default="true"/>
@@ -1072,9 +1160,11 @@
                     <path refid="cassandra.classpath.test"/>
                     <pathelement location="${fqltool.build.classes}"/>
                     <pathelement location="${stress.build.classes}"/>
+                    <pathelement location="${sstableloader.build.classes}"/>
                     <pathelement location="${test.classes}"/>
                     <pathelement location="${fqltool.test.classes}"/>
                     <pathelement location="${stress.test.classes}"/>
+                    <pathelement location="${sstableloader.test.classes}"/>
                 </classpath>
                 <jvmarg line="${java-jvmargs}"/>
                 <jvmarg value="-DscanClassPath=@{scanClassPath}"/>
@@ -1199,10 +1289,12 @@
           <pathelement path="${java.class.path}"/>
           <pathelement location="${stress.build.classes}"/>
           <pathelement location="${fqltool.build.classes}"/>
+          <pathelement location="${sstableloader.build.classes}"/>
           <pathelement location="${test.classes}"/>
           <path refid="cassandra.classpath.test" />
           <pathelement location="${stress.test.classes}"/>
           <pathelement location="${fqltool.test.classes}"/>
+          <pathelement location="${sstableloader.test.classes}"/>
           <pathelement location="${test.conf}"/>
           <pathelement path="${java.class.path}"/>
           <path refid="cassandra.classpath" />
@@ -2008,8 +2100,10 @@
   <classpathentry kind="src" output="${test.classes}" path="test/resources" />
   <classpathentry kind="src" path="tools/stress/src"/>
   <classpathentry kind="src" path="tools/fqltool/src"/>
+  <classpathentry kind="src" path="tools/sstableloader/src"/>
   <classpathentry kind="src" output="build/test/stress-classes" path="tools/stress/test/unit" />
   <classpathentry kind="src" output="build/test/fqltool-classes" path="tools/fqltool/test/unit" />
+  <classpathentry kind="src" output="build/test/sstableloader-classes" path="tools/sstableloader/test/unit" />
   <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
   <classpathentry kind="output" path="build/classes/eclipse"/>
   <classpathentry kind="lib" path="test/conf"/>
@@ -2047,7 +2141,7 @@
 
   <!-- Installs artifacts to local Maven repository -->
   <target name="mvn-install"
-          depends="jar,sources-jar,javadoc-jar"
+          depends="jar,sources-jar,javadoc-jar,sstableloader-sources-jar,sstableloader-javadoc-jar"
           description="Installs the artifacts in the Maven Local Repository">
 
     <!-- the parent -->
@@ -2063,6 +2157,16 @@
              classifier="sources"/>
     <install pomFile="${build.dir}/${final.name}.pom"
              file="${build.dir}/${final.name}-javadoc.jar"
+             classifier="javadoc"/>
+
+    <!-- the cassandra-sstableloader jar -->
+    <install pomFile="${build.dir}/${final.name}-sstableloader.pom"
+             file="${build.dir}/tools/lib/sstableloader.jar"/>
+    <install pomFile="${build.dir}/${final.name}-sstableloader.pom"
+             file="${build.dir}/${final.name}-sstableloader-sources.jar"
+             classifier="sources"/>
+    <install pomFile="${build.dir}/${final.name}-sstableloader.pom"
+             file="${build.dir}/${final.name}-sstableloader-javadoc.jar"
              classifier="javadoc"/>
   </target>
 
@@ -2084,6 +2188,16 @@
             classifier="sources"/>
     <deploy pomFile="${build.dir}/${final.name}.pom"
             file="${build.dir}/${final.name}-javadoc.jar"
+            classifier="javadoc"/>
+
+    <!-- the cassandra-sstableloader jar -->
+    <deploy pomFile="${build.dir}/${final.name}-sstableloader.pom"
+            file="${build.dir}/tools/lib/sstableloader.jar"/>
+    <deploy pomFile="${build.dir}/${final.name}-sstableloader.pom"
+            file="${build.dir}/${final.name}-sstableloader-sources.jar"
+            classifier="sources"/>
+    <deploy pomFile="${build.dir}/${final.name}-sstableloader.pom"
+            file="${build.dir}/${final.name}-sstableloader-javadoc.jar"
             classifier="javadoc"/>
 
     <!-- the distribution -->

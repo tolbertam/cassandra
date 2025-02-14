@@ -49,7 +49,6 @@ import org.apache.cassandra.config.YamlConfigurationLoader;
 import org.apache.cassandra.exceptions.ConfigurationException;
 import org.apache.cassandra.io.util.File;
 import org.apache.cassandra.locator.InetAddressAndPort;
-import org.apache.cassandra.tools.BulkLoader.CmdLineOptions;
 
 import static org.apache.cassandra.config.DataRateSpec.DataRateUnit.MEBIBYTES_PER_SECOND;
 import static org.apache.cassandra.config.EncryptionOptions.ClientAuth.REQUIRED;
@@ -79,7 +78,6 @@ public class LoaderOptions
      * provide options instead of using these constant fields.
      * @deprecated Use {@code throttle-mib} instead
      */
-    /** @deprecated See CASSANDRA-17677 */
     @Deprecated(since = "5.0")
     public static final String THROTTLE_MBITS = "throttle";
     public static final String THROTTLE_MEBIBYTES = "throttle-mib";

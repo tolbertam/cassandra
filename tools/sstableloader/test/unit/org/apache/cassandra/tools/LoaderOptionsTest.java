@@ -25,11 +25,11 @@ import java.nio.file.Paths;
 import java.security.Permission;
 
 import com.google.common.net.HostAndPort;
+import org.apache.commons.io.FileUtils;
 import org.junit.Test;
 
 import org.apache.cassandra.io.util.File;
 
-import static org.apache.cassandra.tools.OfflineToolUtils.sstableDirName;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -213,6 +213,41 @@ public class LoaderOptionsTest
         finally
         {
             System.setSecurityManager(null);
+        }
+    }
+
+    // Copied from OfflineToolUtils
+
+    public static String sstableDirName(String ks, String cf) throws IOException
+    {
+        return sstableDir(ks, cf).absolutePath();
+    }
+
+    public static File sstableDir(String ks, String cf) throws IOException
+    {
+        File dataDir = copySSTables();
+        File ksDir = new File(dataDir, ks);
+        File[] cfDirs = ksDir.tryList((dir, name) -> cf.equals(name) || name.startsWith(cf + '-'));
+        return cfDirs[0];
+    }
+
+    public static File copySSTables() throws IOException
+    {
+        File dataDir = new File("build/test/cassandra/data");
+        File srcDir = new File("test/data/legacy-sstables/ma");
+        FileUtils.copyDirectory(new File(srcDir, "legacy_tables").toJavaIOFile(), new File(dataDir, "legacy_sstables").toJavaIOFile());
+        return dataDir;
+    }
+
+    // Copied from SystemExitException in unit tests
+
+    private static class SystemExitException extends Error
+    {
+        public final int status;
+
+        public SystemExitException(int status)
+        {
+            this.status = status;
         }
     }
 }
