@@ -21,6 +21,10 @@ import java.net.InetSocketAddress;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -42,6 +46,8 @@ import static org.junit.Assert.*;
 
 public class PstmtPersistenceTest extends CQLTester
 {
+    private static final CompletableFuture<?>[] futureArray = new CompletableFuture[0];
+
     @Before
     public void setUp()
     {
@@ -104,7 +110,7 @@ public class PstmtPersistenceTest extends CQLTester
             Assert.assertNotNull(prepared);
         }
 
-        // add anther prepared statement and sync it to table
+        // add another prepared statement and sync it to table
         prepareStatement(statement2, "foo", "bar", clientState);
 
         // statement1 will have two statements prepared because of `setKeyspace` usage
@@ -142,17 +148,101 @@ public class PstmtPersistenceTest extends CQLTester
 
         createTable("CREATE TABLE %s (key int primary key, val int)");
 
+        long initialEvicted = numberOfEvictedStatements();
+
         for (int cnt = 1; cnt < 10000; cnt++)
         {
             prepareStatement("INSERT INTO %s (key, val) VALUES (?, ?) USING TIMESTAMP " + cnt, clientState);
 
-            if (numberOfEvictedStatements() > 0)
+            if (numberOfEvictedStatements() - initialEvicted > 0)
             {
+                assertEquals("Number of statements in table and in cache don't match", numberOfStatementsInMemory(), numberOfStatementsOnDisk());
+
+                // prepare a more statements to trigger more evictions
+                for (int cnt2 = cnt + 1; cnt2 < cnt + 10; cnt2++)
+                    prepareStatement("INSERT INTO %s (key, val) VALUES (?, ?) USING TIMESTAMP " + cnt2, clientState);
+
+                // each new prepared statement should have caused an eviction
+                assertEquals("eviction count didn't increase by the expected number", 10, numberOfEvictedStatements() - initialEvicted);
+                assertEquals("Number of statements in memory (expected) and table (actual) don't match", numberOfStatementsInMemory(), numberOfStatementsOnDisk());
+
                 return;
             }
         }
 
         fail("Prepared statement eviction does not work");
+    }
+
+
+
+    @Test
+    public void testAsyncPstmtInvalidation() throws Throwable
+    {
+        ClientState clientState = ClientState.forInternalCalls();
+        createTable("CREATE TABLE %s (key int primary key, val int)");
+
+        // prepare statements concurrently in a thread pool to exercise bug encountered in CASSANDRA-19703 where
+        // delete from table occurs before the insert due to early eviction.
+        final ExecutorService executor = Executors.newFixedThreadPool(10);
+
+        long initialEvicted = numberOfEvictedStatements();
+        try
+        {
+            int statementsToPrepare = 10000;
+            List<CompletableFuture<MD5Digest>> prepareFutures = new ArrayList<>(statementsToPrepare);
+            for (int cnt = 1; cnt < statementsToPrepare; cnt++)
+            {
+                final int localCnt = cnt;
+                prepareFutures.add(CompletableFuture.supplyAsync(() -> prepareStatement("INSERT INTO %s (key, val) VALUES (?, ?) USING TIMESTAMP " + localCnt, clientState), executor));
+            }
+
+            // Await completion
+            CompletableFuture.allOf(prepareFutures.toArray(futureArray)).get(10, TimeUnit.SECONDS);
+
+            assertNotEquals("Should have evicted some prepared statements", 0, numberOfEvictedStatements() - initialEvicted);
+
+            // ensure the number of statements on disk match the number in memory, if number of statements on disk eclipses in memory, there was a leak.
+            assertEquals("Number of statements in memory (expected) and table (actual) don't match", numberOfStatementsInMemory(), numberOfStatementsOnDisk());
+        }
+        finally
+        {
+            executor.shutdown();
+        }
+    }
+
+    @Test
+    public void testPreloadPreparedStatements() throws Throwable
+    {
+        long initialEvicted = numberOfEvictedStatements();
+        ClientState clientState = ClientState.forInternalCalls();
+        createTable("CREATE TABLE %s (key int primary key, val int)");
+
+        // prepare more statements than the paging size to ensure paging works properly.
+        int statementsToPrepare = 300;
+        int pageSize = 100;
+
+        for (int cnt = 1; cnt <= statementsToPrepare; cnt++)
+        {
+            prepareStatement("INSERT INTO %s (key, val) VALUES (?, ?) USING TIMESTAMP " + cnt, clientState);
+        }
+
+        // capture how many statements are in memory before clearing cache.
+        long statementsInMemory = numberOfStatementsInMemory();
+        long statementsOnDisk = numberOfStatementsOnDisk();
+        assertEquals(statementsOnDisk, statementsInMemory);
+
+        // drop prepared statements from cache only
+        QueryProcessor.clearPreparedStatements(true);
+        assertEquals(0, numberOfStatementsInMemory());
+
+        // Load prepared statements and ensure the cache size matches the size it was before clearing cache.
+        QueryProcessor.instance.preloadPreparedStatements(pageSize);
+        long statementsInMemoryAfterLoading = numberOfStatementsInMemory();
+        assertEquals("Statements in cache previously (expected) does not match statements loaded (actual)", statementsInMemory, statementsInMemoryAfterLoading);
+
+        // Ensure size of cache matches statements prepared - evicted.
+        long totalEvicted = numberOfEvictedStatements() - initialEvicted;
+        assertEquals("Statements prepared - evicted (expected) does not match statements in memory (actual)", statementsToPrepare - totalEvicted, statementsInMemoryAfterLoading);
     }
 
     private long numberOfStatementsOnDisk() throws Throwable
@@ -178,7 +268,6 @@ public class PstmtPersistenceTest extends CQLTester
 
     private MD5Digest prepareStatement(String stmt, String keyspace, String table, ClientState clientState)
     {
-        System.out.println(stmt + String.format(stmt, keyspace + "." + table));
-        return QueryProcessor.instance.prepare(String.format(stmt, keyspace + "." + table), clientState).statementId;
+        return QueryProcessor.instance.prepare(String.format(stmt, keyspace + '.' + table), clientState).statementId;
     }
 }

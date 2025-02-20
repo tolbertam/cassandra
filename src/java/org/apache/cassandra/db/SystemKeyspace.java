@@ -133,6 +133,7 @@ import static org.apache.cassandra.config.DatabaseDescriptor.paxosStatePurging;
 import static org.apache.cassandra.cql3.QueryProcessor.executeInternal;
 import static org.apache.cassandra.cql3.QueryProcessor.executeInternalWithNowInSec;
 import static org.apache.cassandra.cql3.QueryProcessor.executeOnceInternal;
+import static org.apache.cassandra.cql3.QueryProcessor.executeOnceInternalWithPaging;
 import static org.apache.cassandra.service.paxos.Commit.latest;
 import static org.apache.cassandra.utils.CassandraVersion.NULL_VERSION;
 import static org.apache.cassandra.utils.CassandraVersion.UNREADABLE_VERSION;
@@ -1842,11 +1843,11 @@ public final class SystemKeyspace
         }
     }
 
-    public static void writePreparedStatement(String loggedKeyspace, MD5Digest key, String cql)
+    public static void writePreparedStatement(String loggedKeyspace, MD5Digest key, String cql, long timestamp)
     {
-        executeInternal(format("INSERT INTO %s (logged_keyspace, prepared_id, query_string) VALUES (?, ?, ?)",
+        executeInternal(format("INSERT INTO %s (logged_keyspace, prepared_id, query_string) VALUES (?, ?, ?) USING TIMESTAMP ?",
                                PreparedStatements.toString()),
-                        loggedKeyspace, key.byteBuffer(), cql);
+                        loggedKeyspace, key.byteBuffer(), cql, timestamp);
         logger.debug("stored prepared statement for logged keyspace '{}': '{}'", loggedKeyspace, cql);
     }
 
@@ -1864,8 +1865,13 @@ public final class SystemKeyspace
 
     public static int loadPreparedStatements(TriFunction<MD5Digest, String, String, Boolean> onLoaded)
     {
+        return loadPreparedStatements(onLoaded, 5000);
+    }
+
+    public static int loadPreparedStatements(TriFunction<MD5Digest, String, String, Boolean> onLoaded, int pageSize)
+    {
         String query = String.format("SELECT prepared_id, logged_keyspace, query_string FROM %s.%s", SchemaConstants.SYSTEM_KEYSPACE_NAME, PREPARED_STATEMENTS);
-        UntypedResultSet resultSet = executeOnceInternal(query);
+        UntypedResultSet resultSet = executeOnceInternalWithPaging(query, pageSize);
         int counter = 0;
         for (UntypedResultSet.Row row : resultSet)
         {

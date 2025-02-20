@@ -156,6 +156,12 @@ public class QueryProcessor implements QueryHandler
 
     public void preloadPreparedStatements()
     {
+        preloadPreparedStatements(5000);
+    }
+
+    @VisibleForTesting
+    public void preloadPreparedStatements(int pageSize)
+    {
         int count = SystemKeyspace.loadPreparedStatements((id, query, keyspace) -> {
             try
             {
@@ -178,7 +184,7 @@ public class QueryProcessor implements QueryHandler
                 SystemKeyspace.removePreparedStatement(id);
                 return false;
             }
-        });
+        }, pageSize);
         logger.info("Preloaded {} prepared statements", count);
     }
 
@@ -549,12 +555,33 @@ public class QueryProcessor implements QueryHandler
     public static UntypedResultSet executeInternalWithPaging(String query, int pageSize, Object... values)
     {
         Prepared prepared = prepareInternal(query);
-        if (!(prepared.statement instanceof SelectStatement))
+
+        return executeInternalWithPaging(prepared.statement, pageSize, values);
+    }
+
+    /**
+     * Executes with a non-prepared statement using paging.  Generally {@link #executeInternalWithPaging(String, int, Object...)}
+     * should be used instead of this, but this may be used in niche cases like
+     * {@link SystemKeyspace#loadPreparedStatement(MD5Digest, SystemKeyspace.TriFunction)} where prepared statements are
+     * being loaded into {@link #preparedStatements} so it doesn't make sense to prepare a statement in this context.
+     */
+    public static UntypedResultSet executeOnceInternalWithPaging(String query, int pageSize, Object... values)
+    {
+        QueryState queryState = internalQueryState();
+        CQLStatement statement = parseStatement(query, queryState.getClientState());
+        statement.validate(queryState.getClientState());
+
+        return executeInternalWithPaging(statement, pageSize, values);
+    }
+
+    private static UntypedResultSet executeInternalWithPaging(CQLStatement statement, int pageSize, Object... values)
+    {
+        if (!(statement instanceof SelectStatement))
             throw new IllegalArgumentException("Only SELECTs can be paged");
 
-        SelectStatement select = (SelectStatement)prepared.statement;
+        SelectStatement select = (SelectStatement) statement;
         int nowInSec = FBUtilities.nowInSeconds();
-        QueryPager pager = select.getQuery(makeInternalOptionsWithNowInSec(prepared.statement, nowInSec, values), nowInSec).getPager(null, ProtocolVersion.CURRENT);
+        QueryPager pager = select.getQuery(makeInternalOptionsWithNowInSec(select, nowInSec, values), nowInSec).getPager(null, ProtocolVersion.CURRENT);
         return UntypedResultSet.create(select, pager, pageSize);
     }
 
@@ -793,7 +820,7 @@ public class QueryProcessor implements QueryHandler
 
         Prepared previous = preparedStatements.get(statementId, (ignored_) -> prepared);
         if (previous == prepared)
-            SystemKeyspace.writePreparedStatement(keyspace, statementId, queryString);
+            SystemKeyspace.writePreparedStatement(keyspace, statementId, queryString, prepared.timestamp);
 
         ResultSet.PreparedMetadata preparedMetadata = ResultSet.PreparedMetadata.fromPrepared(prepared.statement);
         ResultSet.ResultMetadata resultMetadata = ResultSet.ResultMetadata.fromPrepared(prepared.statement);
