@@ -5,6 +5,7 @@
  * Optionally skip exception logging on invalid legacy protocol magic exception (CASSANDRA-19483)
  * Fix SimpleClient ability to release acquired capacity (CASSANDRA-20202)
  * Fix WaitQueue.Signal.awaitUninterruptibly may block forever if invoking thread is interrupted (CASSANDRA-20084)
+ * Ensure prepared_statement INSERT timestamp precedes eviction DELETE (CASSANDRA-19703)
 Merged from 4.0:
  * Handle sstable metadata stats file getting a new mtime after compaction has finished (CASSANDRA-18119)
  * Honor MAX_PARALLEL_TRANSFERS correctly (CASSANDRA-20532)
