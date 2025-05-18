@@ -110,7 +110,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -120,7 +120,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -201,7 +201,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -211,7 +211,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -267,7 +267,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -277,7 +277,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -378,7 +378,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -388,7 +388,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -534,7 +534,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -544,7 +544,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -621,7 +621,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -631,7 +631,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -740,7 +740,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -750,7 +750,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -814,7 +814,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -824,7 +824,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -905,7 +905,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -915,7 +915,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -1016,7 +1016,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -1026,7 +1026,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -1136,7 +1136,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -1146,7 +1146,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -1227,7 +1227,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -1237,7 +1237,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -1346,7 +1346,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -1356,7 +1356,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -1457,7 +1457,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -1467,7 +1467,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -1567,7 +1567,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -1577,7 +1577,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -1659,7 +1659,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -1669,7 +1669,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -1855,7 +1855,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -1865,7 +1865,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -1942,7 +1942,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -1952,7 +1952,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -2077,7 +2077,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -2087,7 +2087,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -2188,7 +2188,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -2198,7 +2198,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -2298,7 +2298,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -2308,7 +2308,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -2385,7 +2385,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -2395,7 +2395,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -2477,7 +2477,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -2487,7 +2487,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -2588,7 +2588,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -2598,7 +2598,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -2698,7 +2698,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -2708,7 +2708,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -2764,7 +2764,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -2774,7 +2774,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -2883,7 +2883,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -2893,7 +2893,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -2957,7 +2957,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -2967,7 +2967,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -3077,7 +3077,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -3087,7 +3087,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -3211,7 +3211,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -3221,7 +3221,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -3345,7 +3345,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -3355,7 +3355,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -3480,7 +3480,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -3490,7 +3490,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -3599,7 +3599,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -3609,7 +3609,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -3715,7 +3715,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -3725,7 +3725,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -3834,7 +3834,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -3844,7 +3844,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -3907,7 +3907,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -3917,7 +3917,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -3999,7 +3999,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -4009,7 +4009,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -4085,7 +4085,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -4095,7 +4095,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -4158,7 +4158,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -4168,7 +4168,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -4269,7 +4269,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -4279,7 +4279,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -4403,7 +4403,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -4413,7 +4413,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -4494,7 +4494,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -4504,7 +4504,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -4651,7 +4651,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -4661,7 +4661,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -4743,7 +4743,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -4753,7 +4753,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -4834,7 +4834,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -4844,7 +4844,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -4953,7 +4953,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -4963,7 +4963,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -5064,7 +5064,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -5074,7 +5074,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -5174,7 +5174,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -5184,7 +5184,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -5266,7 +5266,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -5276,7 +5276,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -5376,7 +5376,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -5386,7 +5386,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -5468,7 +5468,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -5478,7 +5478,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -5602,7 +5602,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -5612,7 +5612,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -5713,7 +5713,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -5723,7 +5723,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -5804,7 +5804,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -5814,7 +5814,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -5938,7 +5938,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -5948,7 +5948,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -6048,7 +6048,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -6058,7 +6058,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -6135,7 +6135,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -6145,7 +6145,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -6243,7 +6243,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -6253,7 +6253,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -6335,7 +6335,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -6345,7 +6345,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -6445,7 +6445,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -6455,7 +6455,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -6537,7 +6537,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -6547,7 +6547,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -6648,7 +6648,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -6658,7 +6658,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -6740,7 +6740,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -6750,7 +6750,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -6826,7 +6826,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -6836,7 +6836,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -6945,7 +6945,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -6955,7 +6955,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -7064,7 +7064,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -7074,7 +7074,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -7156,7 +7156,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -7166,7 +7166,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -7265,7 +7265,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -7275,7 +7275,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -7352,7 +7352,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -7362,7 +7362,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -7438,7 +7438,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -7448,7 +7448,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -7502,7 +7502,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -7512,7 +7512,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -7594,7 +7594,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -7604,7 +7604,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -7702,7 +7702,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -7712,7 +7712,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -7898,7 +7898,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -7908,7 +7908,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -7971,7 +7971,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -7981,7 +7981,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -8090,7 +8090,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -8100,7 +8100,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -8200,7 +8200,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -8210,7 +8210,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -8334,7 +8334,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -8344,7 +8344,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -8453,7 +8453,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -8463,7 +8463,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -8561,7 +8561,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -8571,7 +8571,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -8671,7 +8671,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -8681,7 +8681,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -8762,7 +8762,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -8772,7 +8772,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -8836,7 +8836,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -8846,7 +8846,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -8900,7 +8900,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -8910,7 +8910,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -9008,7 +9008,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -9018,7 +9018,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -9100,7 +9100,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -9110,7 +9110,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -9234,7 +9234,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -9244,7 +9244,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -9325,7 +9325,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -9335,7 +9335,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -9431,7 +9431,7 @@ jobs:
     - CCM_MAX_HEAP_SIZE: 1024M
     - CCM_HEAP_NEWSIZE: 256M
     - REPEATED_TESTS_STOP_ON_FAILURE: false
-    - REPEATED_UTESTS: null
+    - REPEATED_UTESTS: org.apache.cassandra.cql3.PstmtPersistenceTest
     - REPEATED_UTESTS_COUNT: 500
     - REPEATED_UTESTS_FQLTOOL: null
     - REPEATED_UTESTS_FQLTOOL_COUNT: 500
@@ -9441,7 +9441,7 @@ jobs:
     - REPEATED_UTESTS_STRESS_COUNT: 500
     - REPEATED_SIMULATOR_DTESTS: null
     - REPEATED_SIMULATOR_DTESTS_COUNT: 500
-    - REPEATED_JVM_DTESTS: null
+    - REPEATED_JVM_DTESTS: org.apache.cassandra.distributed.test.ReprepareFuzzTest,org.apache.cassandra.distributed.test.MixedModeFuzzTest
     - REPEATED_JVM_DTESTS_COUNT: 500
     - REPEATED_JVM_UPGRADE_DTESTS: null
     - REPEATED_JVM_UPGRADE_DTESTS_COUNT: 500
@@ -9467,302 +9467,707 @@ workflows:
     - j8_build:
         requires:
         - start_j8_build
+        upstream:
+          start_j8_build:
+          - success
     - start_j8_unit_tests:
         type: approval
     - j8_unit_tests:
         requires:
         - start_j8_unit_tests
         - j8_build
+        upstream:
+          start_j8_unit_tests:
+          - success
+          j8_build:
+          - success
+    - start_j8_unit_tests_repeat:
+        type: approval
+    - j8_unit_tests_repeat:
+        requires:
+        - start_j8_unit_tests_repeat
+        - j8_build
+        upstream:
+          start_j8_unit_tests_repeat:
+          - success
+          j8_build:
+          - success
     - start_j8_jvm_dtests:
         type: approval
     - j8_jvm_dtests:
         requires:
         - start_j8_jvm_dtests
         - j8_build
+        upstream:
+          start_j8_jvm_dtests:
+          - success
+          j8_build:
+          - success
     - start_j8_jvm_dtests_vnode:
         type: approval
     - j8_jvm_dtests_vnode:
         requires:
         - start_j8_jvm_dtests_vnode
         - j8_build
+        upstream:
+          start_j8_jvm_dtests_vnode:
+          - success
+          j8_build:
+          - success
+    - start_j8_jvm_dtests_repeat:
+        type: approval
+    - j8_jvm_dtests_repeat:
+        requires:
+        - start_j8_jvm_dtests_repeat
+        - j8_build
+        upstream:
+          start_j8_jvm_dtests_repeat:
+          - success
+          j8_build:
+          - success
+    - start_j8_jvm_dtests_vnode_repeat:
+        type: approval
+    - j8_jvm_dtests_vnode_repeat:
+        requires:
+        - start_j8_jvm_dtests_vnode_repeat
+        - j8_build
+        upstream:
+          start_j8_jvm_dtests_vnode_repeat:
+          - success
+          j8_build:
+          - success
     - start_j11_jvm_dtests:
         type: approval
     - j11_jvm_dtests:
         requires:
         - start_j11_jvm_dtests
         - j8_build
+        upstream:
+          start_j11_jvm_dtests:
+          - success
+          j8_build:
+          - success
     - start_j11_jvm_dtests_vnode:
         type: approval
     - j11_jvm_dtests_vnode:
         requires:
         - start_j11_jvm_dtests_vnode
         - j8_build
+        upstream:
+          start_j11_jvm_dtests_vnode:
+          - success
+          j8_build:
+          - success
+    - start_j11_jvm_dtests_repeat:
+        type: approval
+    - j11_jvm_dtests_repeat:
+        requires:
+        - start_j11_jvm_dtests_repeat
+        - j8_build
+        upstream:
+          start_j11_jvm_dtests_repeat:
+          - success
+          j8_build:
+          - success
+    - start_j11_jvm_dtests_vnode_repeat:
+        type: approval
+    - j11_jvm_dtests_vnode_repeat:
+        requires:
+        - start_j11_jvm_dtests_vnode_repeat
+        - j8_build
+        upstream:
+          start_j11_jvm_dtests_vnode_repeat:
+          - success
+          j8_build:
+          - success
     - start_j8_simulator_dtests:
         type: approval
     - j8_simulator_dtests:
         requires:
         - start_j8_simulator_dtests
         - j8_build
+        upstream:
+          start_j8_simulator_dtests:
+          - success
+          j8_build:
+          - success
     - start_j8_cqlshlib_tests:
         type: approval
     - j8_cqlshlib_tests:
         requires:
         - start_j8_cqlshlib_tests
         - j8_build
+        upstream:
+          start_j8_cqlshlib_tests:
+          - success
+          j8_build:
+          - success
     - start_j8_cqlshlib_cython_tests:
         type: approval
     - j8_cqlshlib_cython_tests:
         requires:
         - start_j8_cqlshlib_cython_tests
         - j8_build
+        upstream:
+          start_j8_cqlshlib_cython_tests:
+          - success
+          j8_build:
+          - success
     - start_j11_cqlshlib_tests:
         type: approval
     - j11_cqlshlib_tests:
         requires:
         - start_j11_cqlshlib_tests
         - j8_build
+        upstream:
+          start_j11_cqlshlib_tests:
+          - success
+          j8_build:
+          - success
     - start_j11_cqlshlib_cython_tests:
         type: approval
     - j11_cqlshlib_cython_tests:
         requires:
         - start_j11_cqlshlib_cython_tests
         - j8_build
+        upstream:
+          start_j11_cqlshlib_cython_tests:
+          - success
+          j8_build:
+          - success
     - start_j11_unit_tests:
         type: approval
     - j11_unit_tests:
         requires:
         - start_j11_unit_tests
         - j8_build
+        upstream:
+          start_j11_unit_tests:
+          - success
+          j8_build:
+          - success
+    - start_j11_unit_tests_repeat:
+        type: approval
+    - j11_unit_tests_repeat:
+        requires:
+        - start_j11_unit_tests_repeat
+        - j8_build
+        upstream:
+          start_j11_unit_tests_repeat:
+          - success
+          j8_build:
+          - success
     - start_j8_utests_long:
         type: approval
     - j8_utests_long:
         requires:
         - start_j8_utests_long
         - j8_build
+        upstream:
+          start_j8_utests_long:
+          - success
+          j8_build:
+          - success
     - start_j11_utests_long:
         type: approval
     - j11_utests_long:
         requires:
         - start_j11_utests_long
         - j8_build
+        upstream:
+          start_j11_utests_long:
+          - success
+          j8_build:
+          - success
     - start_j8_utests_cdc:
         type: approval
     - j8_utests_cdc:
         requires:
         - start_j8_utests_cdc
         - j8_build
+        upstream:
+          start_j8_utests_cdc:
+          - success
+          j8_build:
+          - success
     - start_j11_utests_cdc:
         type: approval
     - j11_utests_cdc:
         requires:
         - start_j11_utests_cdc
         - j8_build
+        upstream:
+          start_j11_utests_cdc:
+          - success
+          j8_build:
+          - success
+    - start_j8_utests_cdc_repeat:
+        type: approval
+    - j8_utests_cdc_repeat:
+        requires:
+        - start_j8_utests_cdc_repeat
+        - j8_build
+        upstream:
+          start_j8_utests_cdc_repeat:
+          - success
+          j8_build:
+          - success
+    - start_j11_utests_cdc_repeat:
+        type: approval
+    - j11_utests_cdc_repeat:
+        requires:
+        - start_j11_utests_cdc_repeat
+        - j8_build
+        upstream:
+          start_j11_utests_cdc_repeat:
+          - success
+          j8_build:
+          - success
     - start_j8_utests_compression:
         type: approval
     - j8_utests_compression:
         requires:
         - start_j8_utests_compression
         - j8_build
+        upstream:
+          start_j8_utests_compression:
+          - success
+          j8_build:
+          - success
     - start_j11_utests_compression:
         type: approval
     - j11_utests_compression:
         requires:
         - start_j11_utests_compression
         - j8_build
+        upstream:
+          start_j11_utests_compression:
+          - success
+          j8_build:
+          - success
+    - start_j8_utests_compression_repeat:
+        type: approval
+    - j8_utests_compression_repeat:
+        requires:
+        - start_j8_utests_compression_repeat
+        - j8_build
+        upstream:
+          start_j8_utests_compression_repeat:
+          - success
+          j8_build:
+          - success
+    - start_j11_utests_compression_repeat:
+        type: approval
+    - j11_utests_compression_repeat:
+        requires:
+        - start_j11_utests_compression_repeat
+        - j8_build
+        upstream:
+          start_j11_utests_compression_repeat:
+          - success
+          j8_build:
+          - success
     - start_j8_utests_stress:
         type: approval
     - j8_utests_stress:
         requires:
         - start_j8_utests_stress
         - j8_build
+        upstream:
+          start_j8_utests_stress:
+          - success
+          j8_build:
+          - success
     - start_j11_utests_stress:
         type: approval
     - j11_utests_stress:
         requires:
         - start_j11_utests_stress
         - j8_build
+        upstream:
+          start_j11_utests_stress:
+          - success
+          j8_build:
+          - success
     - start_j8_utests_fqltool:
         type: approval
     - j8_utests_fqltool:
         requires:
         - start_j8_utests_fqltool
         - j8_build
+        upstream:
+          start_j8_utests_fqltool:
+          - success
+          j8_build:
+          - success
     - start_j11_utests_fqltool:
         type: approval
     - j11_utests_fqltool:
         requires:
         - start_j11_utests_fqltool
         - j8_build
+        upstream:
+          start_j11_utests_fqltool:
+          - success
+          j8_build:
+          - success
     - start_j8_utests_system_keyspace_directory:
         type: approval
     - j8_utests_system_keyspace_directory:
         requires:
         - start_j8_utests_system_keyspace_directory
         - j8_build
+        upstream:
+          start_j8_utests_system_keyspace_directory:
+          - success
+          j8_build:
+          - success
     - start_j11_utests_system_keyspace_directory:
         type: approval
     - j11_utests_system_keyspace_directory:
         requires:
         - start_j11_utests_system_keyspace_directory
         - j8_build
+        upstream:
+          start_j11_utests_system_keyspace_directory:
+          - success
+          j8_build:
+          - success
+    - start_j8_utests_system_keyspace_directory_repeat:
+        type: approval
+    - j8_utests_system_keyspace_directory_repeat:
+        requires:
+        - start_j8_utests_system_keyspace_directory_repeat
+        - j8_build
+        upstream:
+          start_j8_utests_system_keyspace_directory_repeat:
+          - success
+          j8_build:
+          - success
+    - start_j11_utests_system_keyspace_directory_repeat:
+        type: approval
+    - j11_utests_system_keyspace_directory_repeat:
+        requires:
+        - start_j11_utests_system_keyspace_directory_repeat
+        - j8_build
+        upstream:
+          start_j11_utests_system_keyspace_directory_repeat:
+          - success
+          j8_build:
+          - success
     - start_j8_dtest_jars_build:
         type: approval
     - j8_dtest_jars_build:
         requires:
         - j8_build
         - start_j8_dtest_jars_build
+        upstream:
+          j8_build:
+          - success
+          start_j8_dtest_jars_build:
+          - success
     - start_jvm_upgrade_dtests:
         type: approval
     - j8_jvm_upgrade_dtests:
         requires:
         - start_jvm_upgrade_dtests
         - j8_dtest_jars_build
+        upstream:
+          start_jvm_upgrade_dtests:
+          - success
+          j8_dtest_jars_build:
+          - success
     - start_j8_dtests:
         type: approval
     - j8_dtests:
         requires:
         - start_j8_dtests
         - j8_build
+        upstream:
+          start_j8_dtests:
+          - success
+          j8_build:
+          - success
     - start_j8_dtests_vnode:
         type: approval
     - j8_dtests_vnode:
         requires:
         - start_j8_dtests_vnode
         - j8_build
+        upstream:
+          start_j8_dtests_vnode:
+          - success
+          j8_build:
+          - success
     - start_j8_dtests_offheap:
         type: approval
     - j8_dtests_offheap:
         requires:
         - start_j8_dtests_offheap
         - j8_build
+        upstream:
+          start_j8_dtests_offheap:
+          - success
+          j8_build:
+          - success
     - start_j11_dtests:
         type: approval
     - j11_dtests:
         requires:
         - start_j11_dtests
         - j8_build
+        upstream:
+          start_j11_dtests:
+          - success
+          j8_build:
+          - success
     - start_j11_dtests_vnode:
         type: approval
     - j11_dtests_vnode:
         requires:
         - start_j11_dtests_vnode
         - j8_build
+        upstream:
+          start_j11_dtests_vnode:
+          - success
+          j8_build:
+          - success
     - start_j11_dtests_offheap:
         type: approval
     - j11_dtests_offheap:
         requires:
         - start_j11_dtests_offheap
         - j8_build
+        upstream:
+          start_j11_dtests_offheap:
+          - success
+          j8_build:
+          - success
     - start_j8_dtests_large:
         type: approval
     - j8_dtests_large:
         requires:
         - start_j8_dtests_large
         - j8_build
+        upstream:
+          start_j8_dtests_large:
+          - success
+          j8_build:
+          - success
     - start_j8_dtests_large_vnode:
         type: approval
     - j8_dtests_large_vnode:
         requires:
         - start_j8_dtests_large_vnode
         - j8_build
+        upstream:
+          start_j8_dtests_large_vnode:
+          - success
+          j8_build:
+          - success
     - start_j11_dtests_large:
         type: approval
     - j11_dtests_large:
         requires:
         - start_j11_dtests_large
         - j8_build
+        upstream:
+          start_j11_dtests_large:
+          - success
+          j8_build:
+          - success
     - start_j11_dtests_large_vnode:
         type: approval
     - j11_dtests_large_vnode:
         requires:
         - start_j11_dtests_large_vnode
         - j8_build
+        upstream:
+          start_j11_dtests_large_vnode:
+          - success
+          j8_build:
+          - success
     - start_upgrade_dtests:
         type: approval
     - j8_upgrade_dtests:
         requires:
         - start_upgrade_dtests
         - j8_build
+        upstream:
+          start_upgrade_dtests:
+          - success
+          j8_build:
+          - success
     - start_j8_cqlsh_tests:
         type: approval
     - j8_cqlsh_dtests_py3:
         requires:
         - start_j8_cqlsh_tests
         - j8_build
+        upstream:
+          start_j8_cqlsh_tests:
+          - success
+          j8_build:
+          - success
     - j8_cqlsh_dtests_py3_vnode:
         requires:
         - start_j8_cqlsh_tests
         - j8_build
+        upstream:
+          start_j8_cqlsh_tests:
+          - success
+          j8_build:
+          - success
     - j8_cqlsh_dtests_py38:
         requires:
         - start_j8_cqlsh_tests
         - j8_build
+        upstream:
+          start_j8_cqlsh_tests:
+          - success
+          j8_build:
+          - success
     - j8_cqlsh_dtests_py311:
         requires:
         - start_j8_cqlsh_tests
         - j8_build
+        upstream:
+          start_j8_cqlsh_tests:
+          - success
+          j8_build:
+          - success
     - j8_cqlsh_dtests_py38_vnode:
         requires:
         - start_j8_cqlsh_tests
         - j8_build
+        upstream:
+          start_j8_cqlsh_tests:
+          - success
+          j8_build:
+          - success
     - j8_cqlsh_dtests_py311_vnode:
         requires:
         - start_j8_cqlsh_tests
         - j8_build
+        upstream:
+          start_j8_cqlsh_tests:
+          - success
+          j8_build:
+          - success
     - start_j8_cqlsh_tests_offheap:
         type: approval
     - j8_cqlsh_dtests_py3_offheap:
         requires:
         - start_j8_cqlsh_tests_offheap
         - j8_build
+        upstream:
+          start_j8_cqlsh_tests_offheap:
+          - success
+          j8_build:
+          - success
     - j8_cqlsh_dtests_py38_offheap:
         requires:
         - start_j8_cqlsh_tests_offheap
         - j8_build
+        upstream:
+          start_j8_cqlsh_tests_offheap:
+          - success
+          j8_build:
+          - success
     - j8_cqlsh_dtests_py311_offheap:
         requires:
         - start_j8_cqlsh_tests_offheap
         - j8_build
+        upstream:
+          start_j8_cqlsh_tests_offheap:
+          - success
+          j8_build:
+          - success
     - start_j11_cqlsh_tests:
         type: approval
     - j11_cqlsh_dtests_py3:
         requires:
         - start_j11_cqlsh_tests
         - j8_build
+        upstream:
+          start_j11_cqlsh_tests:
+          - success
+          j8_build:
+          - success
     - j11_cqlsh_dtests_py3_vnode:
         requires:
         - start_j11_cqlsh_tests
         - j8_build
+        upstream:
+          start_j11_cqlsh_tests:
+          - success
+          j8_build:
+          - success
     - j11_cqlsh_dtests_py38:
         requires:
         - start_j11_cqlsh_tests
         - j8_build
+        upstream:
+          start_j11_cqlsh_tests:
+          - success
+          j8_build:
+          - success
     - j11_cqlsh_dtests_py311:
         requires:
         - start_j11_cqlsh_tests
         - j8_build
+        upstream:
+          start_j11_cqlsh_tests:
+          - success
+          j8_build:
+          - success
     - j11_cqlsh_dtests_py38_vnode:
         requires:
         - start_j11_cqlsh_tests
         - j8_build
+        upstream:
+          start_j11_cqlsh_tests:
+          - success
+          j8_build:
+          - success
     - j11_cqlsh_dtests_py311_vnode:
         requires:
         - start_j11_cqlsh_tests
         - j8_build
+        upstream:
+          start_j11_cqlsh_tests:
+          - success
+          j8_build:
+          - success
     - start_j11_cqlsh_tests_offheap:
         type: approval
     - j11_cqlsh_dtests_py3_offheap:
         requires:
         - start_j11_cqlsh_tests_offheap
         - j8_build
+        upstream:
+          start_j11_cqlsh_tests_offheap:
+          - success
+          j8_build:
+          - success
     - j11_cqlsh_dtests_py38_offheap:
         requires:
         - start_j11_cqlsh_tests_offheap
         - j8_build
+        upstream:
+          start_j11_cqlsh_tests_offheap:
+          - success
+          j8_build:
+          - success
     - j11_cqlsh_dtests_py311_offheap:
         requires:
         - start_j11_cqlsh_tests_offheap
         - j8_build
+        upstream:
+          start_j11_cqlsh_tests_offheap:
+          - success
+          j8_build:
+          - success
   java8_pre-commit_tests:
     jobs:
     - start_pre-commit_tests:
@@ -9770,221 +10175,523 @@ workflows:
     - j8_build:
         requires:
         - start_pre-commit_tests
+        upstream:
+          start_pre-commit_tests:
+          - success
     - j8_unit_tests:
         requires:
         - j8_build
+        upstream:
+          j8_build:
+          - success
+    - j8_unit_tests_repeat:
+        requires:
+        - j8_build
+        upstream:
+          j8_build:
+          - success
     - j8_simulator_dtests:
         requires:
         - j8_build
+        upstream:
+          j8_build:
+          - success
     - j8_jvm_dtests:
         requires:
         - j8_build
+        upstream:
+          j8_build:
+          - success
+    - j8_jvm_dtests_repeat:
+        requires:
+        - j8_build
+        upstream:
+          j8_build:
+          - success
     - j8_jvm_dtests_vnode:
         requires:
         - j8_build
+        upstream:
+          j8_build:
+          - success
+    - j8_jvm_dtests_vnode_repeat:
+        requires:
+        - j8_build
+        upstream:
+          j8_build:
+          - success
     - j11_jvm_dtests:
         requires:
         - j8_build
+        upstream:
+          j8_build:
+          - success
+    - j11_jvm_dtests_repeat:
+        requires:
+        - j8_build
+        upstream:
+          j8_build:
+          - success
     - j11_jvm_dtests_vnode:
         requires:
         - j8_build
+        upstream:
+          j8_build:
+          - success
+    - j11_jvm_dtests_vnode_repeat:
+        requires:
+        - j8_build
+        upstream:
+          j8_build:
+          - success
     - j8_cqlshlib_tests:
         requires:
         - j8_build
+        upstream:
+          j8_build:
+          - success
     - j8_cqlshlib_cython_tests:
         requires:
         - j8_build
+        upstream:
+          j8_build:
+          - success
     - j11_cqlshlib_tests:
         requires:
         - j8_build
+        upstream:
+          j8_build:
+          - success
     - j11_cqlshlib_cython_tests:
         requires:
         - j8_build
+        upstream:
+          j8_build:
+          - success
     - j11_unit_tests:
         requires:
         - j8_build
+        upstream:
+          j8_build:
+          - success
+    - j11_unit_tests_repeat:
+        requires:
+        - j8_build
+        upstream:
+          j8_build:
+          - success
     - start_utests_long:
         type: approval
     - j8_utests_long:
         requires:
         - start_utests_long
         - j8_build
+        upstream:
+          start_utests_long:
+          - success
+          j8_build:
+          - success
     - j11_utests_long:
         requires:
         - start_utests_long
         - j8_build
+        upstream:
+          start_utests_long:
+          - success
+          j8_build:
+          - success
     - start_utests_cdc:
         type: approval
     - j8_utests_cdc:
         requires:
         - start_utests_cdc
         - j8_build
+        upstream:
+          start_utests_cdc:
+          - success
+          j8_build:
+          - success
     - j11_utests_cdc:
         requires:
         - start_utests_cdc
         - j8_build
+        upstream:
+          start_utests_cdc:
+          - success
+          j8_build:
+          - success
+    - j8_utests_cdc_repeat:
+        requires:
+        - start_utests_cdc
+        - j8_build
+        upstream:
+          start_utests_cdc:
+          - success
+          j8_build:
+          - success
+    - j11_utests_cdc_repeat:
+        requires:
+        - start_utests_cdc
+        - j8_build
+        upstream:
+          start_utests_cdc:
+          - success
+          j8_build:
+          - success
     - start_utests_compression:
         type: approval
     - j8_utests_compression:
         requires:
         - start_utests_compression
         - j8_build
+        upstream:
+          start_utests_compression:
+          - success
+          j8_build:
+          - success
     - j11_utests_compression:
         requires:
         - start_utests_compression
         - j8_build
+        upstream:
+          start_utests_compression:
+          - success
+          j8_build:
+          - success
+    - j8_utests_compression_repeat:
+        requires:
+        - start_utests_compression
+        - j8_build
+        upstream:
+          start_utests_compression:
+          - success
+          j8_build:
+          - success
+    - j11_utests_compression_repeat:
+        requires:
+        - start_utests_compression
+        - j8_build
+        upstream:
+          start_utests_compression:
+          - success
+          j8_build:
+          - success
     - start_utests_stress:
         type: approval
     - j8_utests_stress:
         requires:
         - start_utests_stress
         - j8_build
+        upstream:
+          start_utests_stress:
+          - success
+          j8_build:
+          - success
     - j11_utests_stress:
         requires:
         - start_utests_stress
         - j8_build
+        upstream:
+          start_utests_stress:
+          - success
+          j8_build:
+          - success
     - start_utests_fqltool:
         type: approval
     - j8_utests_fqltool:
         requires:
         - start_utests_fqltool
         - j8_build
+        upstream:
+          start_utests_fqltool:
+          - success
+          j8_build:
+          - success
     - j11_utests_fqltool:
         requires:
         - start_utests_fqltool
         - j8_build
+        upstream:
+          start_utests_fqltool:
+          - success
+          j8_build:
+          - success
     - start_utests_system_keyspace_directory:
         type: approval
     - j8_utests_system_keyspace_directory:
         requires:
         - j8_build
+        upstream:
+          j8_build:
+          - success
     - j11_utests_system_keyspace_directory:
         requires:
         - start_utests_system_keyspace_directory
         - j8_build
+        upstream:
+          start_utests_system_keyspace_directory:
+          - success
+          j8_build:
+          - success
+    - j8_utests_system_keyspace_directory_repeat:
+        requires:
+        - j8_build
+        upstream:
+          j8_build:
+          - success
+    - j11_utests_system_keyspace_directory_repeat:
+        requires:
+        - start_utests_system_keyspace_directory
+        - j8_build
+        upstream:
+          start_utests_system_keyspace_directory:
+          - success
+          j8_build:
+          - success
     - start_jvm_upgrade_dtests:
         type: approval
     - j8_dtest_jars_build:
         requires:
         - j8_build
         - start_jvm_upgrade_dtests
+        upstream:
+          j8_build:
+          - success
+          start_jvm_upgrade_dtests:
+          - success
     - j8_jvm_upgrade_dtests:
         requires:
         - j8_dtest_jars_build
+        upstream:
+          j8_dtest_jars_build:
+          - success
     - j8_dtests:
         requires:
         - j8_build
+        upstream:
+          j8_build:
+          - success
     - j8_dtests_vnode:
         requires:
         - j8_build
+        upstream:
+          j8_build:
+          - success
     - start_j8_dtests_offheap:
         type: approval
     - j8_dtests_offheap:
         requires:
         - start_j8_dtests_offheap
         - j8_build
+        upstream:
+          start_j8_dtests_offheap:
+          - success
+          j8_build:
+          - success
     - j11_dtests:
         requires:
         - j8_build
+        upstream:
+          j8_build:
+          - success
     - j11_dtests_vnode:
         requires:
         - j8_build
+        upstream:
+          j8_build:
+          - success
     - start_j11_dtests_offheap:
         type: approval
     - j11_dtests_offheap:
         requires:
         - start_j11_dtests_offheap
         - j8_build
+        upstream:
+          start_j11_dtests_offheap:
+          - success
+          j8_build:
+          - success
     - start_j8_dtests_large:
         type: approval
     - j8_dtests_large:
         requires:
         - start_j8_dtests_large
         - j8_build
+        upstream:
+          start_j8_dtests_large:
+          - success
+          j8_build:
+          - success
     - j8_dtests_large_vnode:
         requires:
         - start_j8_dtests_large
         - j8_build
+        upstream:
+          start_j8_dtests_large:
+          - success
+          j8_build:
+          - success
     - start_j11_dtests_large:
         type: approval
     - j11_dtests_large:
         requires:
         - start_j11_dtests_large
         - j8_build
+        upstream:
+          start_j11_dtests_large:
+          - success
+          j8_build:
+          - success
     - j11_dtests_large_vnode:
         requires:
         - start_j11_dtests_large
         - j8_build
+        upstream:
+          start_j11_dtests_large:
+          - success
+          j8_build:
+          - success
     - start_upgrade_dtests:
         type: approval
     - j8_upgrade_dtests:
         requires:
         - j8_build
         - start_upgrade_dtests
+        upstream:
+          j8_build:
+          - success
+          start_upgrade_dtests:
+          - success
     - j8_cqlsh_dtests_py3:
         requires:
         - j8_build
+        upstream:
+          j8_build:
+          - success
     - j8_cqlsh_dtests_py3_vnode:
         requires:
         - j8_build
+        upstream:
+          j8_build:
+          - success
     - j8_cqlsh_dtests_py38:
         requires:
         - j8_build
+        upstream:
+          j8_build:
+          - success
     - j8_cqlsh_dtests_py311:
         requires:
         - j8_build
+        upstream:
+          j8_build:
+          - success
     - j8_cqlsh_dtests_py38_vnode:
         requires:
         - j8_build
+        upstream:
+          j8_build:
+          - success
     - j8_cqlsh_dtests_py311_vnode:
         requires:
         - j8_build
+        upstream:
+          j8_build:
+          - success
     - start_j8_cqlsh_dtests_offheap:
         type: approval
     - j8_cqlsh_dtests_py3_offheap:
         requires:
         - start_j8_cqlsh_dtests_offheap
         - j8_build
+        upstream:
+          start_j8_cqlsh_dtests_offheap:
+          - success
+          j8_build:
+          - success
     - j8_cqlsh_dtests_py38_offheap:
         requires:
         - start_j8_cqlsh_dtests_offheap
         - j8_build
+        upstream:
+          start_j8_cqlsh_dtests_offheap:
+          - success
+          j8_build:
+          - success
     - j8_cqlsh_dtests_py311_offheap:
         requires:
         - start_j8_cqlsh_dtests_offheap
         - j8_build
+        upstream:
+          start_j8_cqlsh_dtests_offheap:
+          - success
+          j8_build:
+          - success
     - j11_cqlsh_dtests_py3:
         requires:
         - j8_build
+        upstream:
+          j8_build:
+          - success
     - j11_cqlsh_dtests_py3_vnode:
         requires:
         - j8_build
+        upstream:
+          j8_build:
+          - success
     - j11_cqlsh_dtests_py38:
         requires:
         - j8_build
+        upstream:
+          j8_build:
+          - success
     - j11_cqlsh_dtests_py311:
         requires:
         - j8_build
+        upstream:
+          j8_build:
+          - success
     - j11_cqlsh_dtests_py38_vnode:
         requires:
         - j8_build
+        upstream:
+          j8_build:
+          - success
     - j11_cqlsh_dtests_py311_vnode:
         requires:
         - j8_build
+        upstream:
+          j8_build:
+          - success
     - start_j11_cqlsh-dtests-offheap:
         type: approval
     - j11_cqlsh_dtests_py3_offheap:
         requires:
         - start_j11_cqlsh-dtests-offheap
         - j8_build
+        upstream:
+          start_j11_cqlsh-dtests-offheap:
+          - success
+          j8_build:
+          - success
     - j11_cqlsh_dtests_py38_offheap:
         requires:
         - start_j11_cqlsh-dtests-offheap
         - j8_build
+        upstream:
+          start_j11_cqlsh-dtests-offheap:
+          - success
+          j8_build:
+          - success
     - j11_cqlsh_dtests_py311_offheap:
         requires:
         - start_j11_cqlsh-dtests-offheap
         - j8_build
+        upstream:
+          start_j11_cqlsh-dtests-offheap:
+          - success
+          j8_build:
+          - success
   java11_separate_tests:
     jobs:
     - start_j11_build:
@@ -9992,142 +10699,336 @@ workflows:
     - j11_build:
         requires:
         - start_j11_build
+        upstream:
+          start_j11_build:
+          - success
     - start_j11_unit_tests:
         type: approval
     - j11_unit_tests:
         requires:
         - start_j11_unit_tests
         - j11_build
+        upstream:
+          start_j11_unit_tests:
+          - success
+          j11_build:
+          - success
+    - start_j11_unit_tests_repeat:
+        type: approval
+    - j11_unit_tests_repeat:
+        requires:
+        - start_j11_unit_tests_repeat
+        - j11_build
+        upstream:
+          start_j11_unit_tests_repeat:
+          - success
+          j11_build:
+          - success
     - start_j11_jvm_dtests:
         type: approval
     - j11_jvm_dtests:
         requires:
         - start_j11_jvm_dtests
         - j11_build
+        upstream:
+          start_j11_jvm_dtests:
+          - success
+          j11_build:
+          - success
     - start_j11_jvm_dtests_vnode:
         type: approval
     - j11_jvm_dtests_vnode:
         requires:
         - start_j11_jvm_dtests_vnode
         - j11_build
+        upstream:
+          start_j11_jvm_dtests_vnode:
+          - success
+          j11_build:
+          - success
+    - start_j11_jvm_dtests_repeat:
+        type: approval
+    - j11_jvm_dtests_repeat:
+        requires:
+        - start_j11_jvm_dtests_repeat
+        - j11_build
+        upstream:
+          start_j11_jvm_dtests_repeat:
+          - success
+          j11_build:
+          - success
+    - start_j11_jvm_dtests_vnode_repeat:
+        type: approval
+    - j11_jvm_dtests_vnode_repeat:
+        requires:
+        - start_j11_jvm_dtests_vnode_repeat
+        - j11_build
+        upstream:
+          start_j11_jvm_dtests_vnode_repeat:
+          - success
+          j11_build:
+          - success
     - start_j11_cqlshlib_tests:
         type: approval
     - j11_cqlshlib_tests:
         requires:
         - start_j11_cqlshlib_tests
         - j11_build
+        upstream:
+          start_j11_cqlshlib_tests:
+          - success
+          j11_build:
+          - success
     - start_j11_cqlshlib_cython_tests:
         type: approval
     - j11_cqlshlib_cython_tests:
         requires:
         - start_j11_cqlshlib_cython_tests
         - j11_build
+        upstream:
+          start_j11_cqlshlib_cython_tests:
+          - success
+          j11_build:
+          - success
     - start_j11_dtests:
         type: approval
     - j11_dtests:
         requires:
         - start_j11_dtests
         - j11_build
+        upstream:
+          start_j11_dtests:
+          - success
+          j11_build:
+          - success
     - start_j11_dtests_vnode:
         type: approval
     - j11_dtests_vnode:
         requires:
         - start_j11_dtests_vnode
         - j11_build
+        upstream:
+          start_j11_dtests_vnode:
+          - success
+          j11_build:
+          - success
     - start_j11_dtests_offheap:
         type: approval
     - j11_dtests_offheap:
         requires:
         - start_j11_dtests_offheap
         - j11_build
+        upstream:
+          start_j11_dtests_offheap:
+          - success
+          j11_build:
+          - success
     - start_j11_dtests_large:
         type: approval
     - j11_dtests_large:
         requires:
         - start_j11_dtests_large
         - j11_build
+        upstream:
+          start_j11_dtests_large:
+          - success
+          j11_build:
+          - success
     - start_j11_dtests_large_vnode:
         type: approval
     - j11_dtests_large_vnode:
         requires:
         - start_j11_dtests_large_vnode
         - j11_build
+        upstream:
+          start_j11_dtests_large_vnode:
+          - success
+          j11_build:
+          - success
     - start_j11_cqlsh_tests:
         type: approval
     - j11_cqlsh_dtests_py3:
         requires:
         - start_j11_cqlsh_tests
         - j11_build
+        upstream:
+          start_j11_cqlsh_tests:
+          - success
+          j11_build:
+          - success
     - j11_cqlsh_dtests_py3_vnode:
         requires:
         - start_j11_cqlsh_tests
         - j11_build
+        upstream:
+          start_j11_cqlsh_tests:
+          - success
+          j11_build:
+          - success
     - j11_cqlsh_dtests_py38:
         requires:
         - start_j11_cqlsh_tests
         - j11_build
+        upstream:
+          start_j11_cqlsh_tests:
+          - success
+          j11_build:
+          - success
     - j11_cqlsh_dtests_py311:
         requires:
         - start_j11_cqlsh_tests
         - j11_build
+        upstream:
+          start_j11_cqlsh_tests:
+          - success
+          j11_build:
+          - success
     - j11_cqlsh_dtests_py38_vnode:
         requires:
         - start_j11_cqlsh_tests
         - j11_build
+        upstream:
+          start_j11_cqlsh_tests:
+          - success
+          j11_build:
+          - success
     - j11_cqlsh_dtests_py311_vnode:
         requires:
         - start_j11_cqlsh_tests
         - j11_build
+        upstream:
+          start_j11_cqlsh_tests:
+          - success
+          j11_build:
+          - success
     - start_j11_cqlsh-dtests-offheap:
         type: approval
     - j11_cqlsh_dtests_py3_offheap:
         requires:
         - start_j11_cqlsh-dtests-offheap
         - j11_build
+        upstream:
+          start_j11_cqlsh-dtests-offheap:
+          - success
+          j11_build:
+          - success
     - j11_cqlsh_dtests_py38_offheap:
         requires:
         - start_j11_cqlsh-dtests-offheap
         - j11_build
+        upstream:
+          start_j11_cqlsh-dtests-offheap:
+          - success
+          j11_build:
+          - success
     - j11_cqlsh_dtests_py311_offheap:
         requires:
         - start_j11_cqlsh-dtests-offheap
         - j11_build
+        upstream:
+          start_j11_cqlsh-dtests-offheap:
+          - success
+          j11_build:
+          - success
     - start_j11_utests_long:
         type: approval
     - j11_utests_long:
         requires:
         - start_j11_utests_long
         - j11_build
+        upstream:
+          start_j11_utests_long:
+          - success
+          j11_build:
+          - success
     - start_j11_utests_cdc:
         type: approval
     - j11_utests_cdc:
         requires:
         - start_j11_utests_cdc
         - j11_build
+        upstream:
+          start_j11_utests_cdc:
+          - success
+          j11_build:
+          - success
+    - start_j11_utests_cdc_repeat:
+        type: approval
+    - j11_utests_cdc_repeat:
+        requires:
+        - start_j11_utests_cdc_repeat
+        - j11_build
+        upstream:
+          start_j11_utests_cdc_repeat:
+          - success
+          j11_build:
+          - success
     - start_j11_utests_compression:
         type: approval
     - j11_utests_compression:
         requires:
         - start_j11_utests_compression
         - j11_build
+        upstream:
+          start_j11_utests_compression:
+          - success
+          j11_build:
+          - success
+    - start_j11_utests_compression_repeat:
+        type: approval
+    - j11_utests_compression_repeat:
+        requires:
+        - start_j11_utests_compression_repeat
+        - j11_build
+        upstream:
+          start_j11_utests_compression_repeat:
+          - success
+          j11_build:
+          - success
     - start_j11_utests_stress:
         type: approval
     - j11_utests_stress:
         requires:
         - start_j11_utests_stress
         - j11_build
+        upstream:
+          start_j11_utests_stress:
+          - success
+          j11_build:
+          - success
     - start_j11_utests_fqltool:
         type: approval
     - j11_utests_fqltool:
         requires:
         - start_j11_utests_fqltool
         - j11_build
+        upstream:
+          start_j11_utests_fqltool:
+          - success
+          j11_build:
+          - success
     - start_j11_utests_system_keyspace_directory:
         type: approval
     - j11_utests_system_keyspace_directory:
         requires:
         - start_j11_utests_system_keyspace_directory
         - j11_build
+        upstream:
+          start_j11_utests_system_keyspace_directory:
+          - success
+          j11_build:
+          - success
+    - start_j11_utests_system_keyspace_directory_repeat:
+        type: approval
+    - j11_utests_system_keyspace_directory_repeat:
+        requires:
+        - start_j11_utests_system_keyspace_directory_repeat
+        - j11_build
+        upstream:
+          start_j11_utests_system_keyspace_directory_repeat:
+          - success
+          j11_build:
+          - success
   java11_pre-commit_tests:
     jobs:
     - start_pre-commit_tests:
@@ -10135,108 +11036,255 @@ workflows:
     - j11_build:
         requires:
         - start_pre-commit_tests
+        upstream:
+          start_pre-commit_tests:
+          - success
     - j11_unit_tests:
         requires:
         - j11_build
+        upstream:
+          j11_build:
+          - success
+    - j11_unit_tests_repeat:
+        requires:
+        - j11_build
+        upstream:
+          j11_build:
+          - success
     - j11_jvm_dtests:
         requires:
         - j11_build
+        upstream:
+          j11_build:
+          - success
+    - j11_jvm_dtests_repeat:
+        requires:
+        - j11_build
+        upstream:
+          j11_build:
+          - success
     - j11_jvm_dtests_vnode:
         requires:
         - j11_build
+        upstream:
+          j11_build:
+          - success
+    - j11_jvm_dtests_vnode_repeat:
+        requires:
+        - j11_build
+        upstream:
+          j11_build:
+          - success
     - j11_cqlshlib_tests:
         requires:
         - j11_build
+        upstream:
+          j11_build:
+          - success
     - j11_cqlshlib_cython_tests:
         requires:
         - j11_build
+        upstream:
+          j11_build:
+          - success
     - j11_dtests:
         requires:
         - j11_build
+        upstream:
+          j11_build:
+          - success
     - j11_dtests_vnode:
         requires:
         - j11_build
+        upstream:
+          j11_build:
+          - success
     - start_j11_dtests_offheap:
         type: approval
     - j11_dtests_offheap:
         requires:
         - start_j11_dtests_offheap
         - j11_build
+        upstream:
+          start_j11_dtests_offheap:
+          - success
+          j11_build:
+          - success
     - start_j11_dtests_large:
         type: approval
     - j11_dtests_large:
         requires:
         - start_j11_dtests_large
         - j11_build
+        upstream:
+          start_j11_dtests_large:
+          - success
+          j11_build:
+          - success
     - j11_dtests_large_vnode:
         requires:
         - start_j11_dtests_large
         - j11_build
+        upstream:
+          start_j11_dtests_large:
+          - success
+          j11_build:
+          - success
     - j11_cqlsh_dtests_py3:
         requires:
         - j11_build
+        upstream:
+          j11_build:
+          - success
     - j11_cqlsh_dtests_py3_vnode:
         requires:
         - j11_build
+        upstream:
+          j11_build:
+          - success
     - j11_cqlsh_dtests_py38:
         requires:
         - j11_build
+        upstream:
+          j11_build:
+          - success
     - j11_cqlsh_dtests_py311:
         requires:
         - j11_build
+        upstream:
+          j11_build:
+          - success
     - j11_cqlsh_dtests_py38_vnode:
         requires:
         - j11_build
+        upstream:
+          j11_build:
+          - success
     - j11_cqlsh_dtests_py311_vnode:
         requires:
         - j11_build
+        upstream:
+          j11_build:
+          - success
     - start_j11_cqlsh-dtests-offheap:
         type: approval
     - j11_cqlsh_dtests_py3_offheap:
         requires:
         - start_j11_cqlsh-dtests-offheap
         - j11_build
+        upstream:
+          start_j11_cqlsh-dtests-offheap:
+          - success
+          j11_build:
+          - success
     - j11_cqlsh_dtests_py38_offheap:
         requires:
         - start_j11_cqlsh-dtests-offheap
         - j11_build
+        upstream:
+          start_j11_cqlsh-dtests-offheap:
+          - success
+          j11_build:
+          - success
     - j11_cqlsh_dtests_py311_offheap:
         requires:
         - start_j11_cqlsh-dtests-offheap
         - j11_build
+        upstream:
+          start_j11_cqlsh-dtests-offheap:
+          - success
+          j11_build:
+          - success
     - start_utests_long:
         type: approval
     - j11_utests_long:
         requires:
         - start_utests_long
         - j11_build
+        upstream:
+          start_utests_long:
+          - success
+          j11_build:
+          - success
     - start_utests_cdc:
         type: approval
     - j11_utests_cdc:
         requires:
         - start_utests_cdc
         - j11_build
+        upstream:
+          start_utests_cdc:
+          - success
+          j11_build:
+          - success
+    - j11_utests_cdc_repeat:
+        requires:
+        - start_utests_cdc
+        - j11_build
+        upstream:
+          start_utests_cdc:
+          - success
+          j11_build:
+          - success
     - start_utests_compression:
         type: approval
     - j11_utests_compression:
         requires:
         - start_utests_compression
         - j11_build
+        upstream:
+          start_utests_compression:
+          - success
+          j11_build:
+          - success
+    - j11_utests_compression_repeat:
+        requires:
+        - start_utests_compression
+        - j11_build
+        upstream:
+          start_utests_compression:
+          - success
+          j11_build:
+          - success
     - start_utests_stress:
         type: approval
     - j11_utests_stress:
         requires:
         - start_utests_stress
         - j11_build
+        upstream:
+          start_utests_stress:
+          - success
+          j11_build:
+          - success
     - start_utests_fqltool:
         type: approval
     - j11_utests_fqltool:
         requires:
         - start_utests_fqltool
         - j11_build
+        upstream:
+          start_utests_fqltool:
+          - success
+          j11_build:
+          - success
     - start_utests_system_keyspace_directory:
         type: approval
     - j11_utests_system_keyspace_directory:
         requires:
         - start_utests_system_keyspace_directory
         - j11_build
+        upstream:
+          start_utests_system_keyspace_directory:
+          - success
+          j11_build:
+          - success
+    - j11_utests_system_keyspace_directory_repeat:
+        requires:
+        - start_utests_system_keyspace_directory
+        - j11_build
+        upstream:
+          start_utests_system_keyspace_directory:
+          - success
+          j11_build:
+          - success
