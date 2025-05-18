@@ -222,16 +222,31 @@ public class PstmtPersistenceTest extends CQLTester
         long initialEvicted = numberOfEvictedStatements();
         try
         {
-            int statementsToPrepare = 10000;
-            List<CompletableFuture<MD5Digest>> prepareFutures = new ArrayList<>(statementsToPrepare);
-            for (int cnt = 1; cnt <= statementsToPrepare; cnt++)
+            int initialMaxStatementsToPrepare = 10000;
+            int maxStatementsToPrepare = initialMaxStatementsToPrepare;
+            boolean hasEvicted = false;
+            int concurrency = 100;
+            List<CompletableFuture<MD5Digest>> prepareFutures = new ArrayList<>(concurrency);
+
+            for (int cnt = 1; cnt <= maxStatementsToPrepare; cnt++)
             {
                 final int localCnt = cnt;
                 prepareFutures.add(CompletableFuture.supplyAsync(() -> prepareStatement("INSERT INTO %s (key, val) VALUES (?, ?) USING TIMESTAMP " + localCnt, clientState), executor));
-            }
 
-            // Await completion
-            CompletableFuture.allOf(prepareFutures.toArray(futureArray)).get(10, TimeUnit.SECONDS);
+                if (prepareFutures.size() == concurrency)
+                {
+                    // Await completion of current inflight futures
+                    CompletableFuture.allOf(prepareFutures.toArray(futureArray)).get(10, TimeUnit.SECONDS);
+                    prepareFutures.clear();
+                }
+
+                // Once we've detected evictions, prepare as many statements as we've prepared so far to initialMaxStatementsToPrepare and then stop.
+                if (!hasEvicted && numberOfEvictedStatements() - initialEvicted > 0)
+                {
+                    maxStatementsToPrepare = Math.min(cnt * 2, initialMaxStatementsToPrepare);
+                    hasEvicted = true;
+                }
+            }
 
             long evictedStatements = numberOfEvictedStatements() - initialEvicted;
             assertNotEquals("Should have evicted some prepared statements", 0, evictedStatements);
